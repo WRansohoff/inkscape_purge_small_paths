@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Purge Small Shapes</_name>
+  <id>vivonomicon.purge_small_shapes</id>
+  <dependency type="executable" location="extensions">purge_small_shapes.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <param name="area" type="float" min="0" max="999999999" _gui-text="Minimum allowable area for shapes.">10.0</param>
+  <param name="segments" type="int" min="1" max="128" _gui-text="Number of line segments per curve (Large values may crash)">4</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Modify Path"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">purge_small_shapes.py</command>
+  </script>
+</inkscape-extension>
